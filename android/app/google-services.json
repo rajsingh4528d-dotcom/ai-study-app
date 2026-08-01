@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "225344594013",
+    "project_id": "ai-study-app-a19c3",
+    "storage_bucket": "ai-study-app-a19c3.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:225344594013:android:25498912b45566c6f3edb4",
+        "android_client_info": {
+          "package_name": "com.example.ai_study_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC94ABunIpKuDhnVzzOWQJh8QtJzbPDOwQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
