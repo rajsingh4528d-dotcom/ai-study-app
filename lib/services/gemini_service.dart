@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:google_generative_ai/google_generative_ai.dart';
 
@@ -5,7 +7,13 @@ class GeminiService {
   late final GenerativeModel _model;
 
   GeminiService() {
-    final apiKey = dotenv.env['GEMINI_API_KEY'];
+    String? apiKey;
+
+    // Codemagic Environment Variable
+    apiKey = Platform.environment['GEMINI_API_KEY'];
+
+    // Local .env
+    apiKey ??= dotenv.env['GEMINI_API_KEY'];
 
     if (apiKey == null || apiKey.isEmpty) {
       throw Exception("Gemini API Key Missing");
@@ -29,7 +37,6 @@ You are India's Best NCERT Teacher.
 Teach students exactly like a school teacher.
 
 Rules:
-
 1. Explain in very easy English.
 2. Follow NCERT syllabus.
 3. Give NEW answer every time.
@@ -82,7 +89,6 @@ You are AI Teacher.
 Your job is to teach students.
 
 Rules:
-
 • Explain in very easy English.
 • Answer step by step.
 • Use simple examples.
