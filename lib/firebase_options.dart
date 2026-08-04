@@ -21,10 +21,7 @@ class DefaultFirebaseOptions {
     }
     switch (defaultTargetPlatform) {
       case TargetPlatform.android:
-        throw UnsupportedError(
-          'DefaultFirebaseOptions have not been configured for android - '
-          'you can reconfigure this by running the FlutterFire CLI again.',
-        );
+        return android;
       case TargetPlatform.iOS:
         return ios;
       case TargetPlatform.macOS:
@@ -51,7 +48,6 @@ class DefaultFirebaseOptions {
     authDomain: 'ai-study-app-a19c3.firebaseapp.com',
     storageBucket: 'ai-study-app-a19c3.firebasestorage.app',
   );
-
   static const FirebaseOptions ios = FirebaseOptions(
     apiKey: 'AIzaSyDexwubSKozjfGwKahjmFtSB6X6nJnFIAw',
     appId: '1:225344594013:ios:c726d300040fdc17f3edb4',
@@ -76,6 +72,13 @@ class DefaultFirebaseOptions {
     messagingSenderId: '225344594013',
     projectId: 'ai-study-app-a19c3',
     authDomain: 'ai-study-app-a19c3.firebaseapp.com',
+    storageBucket: 'ai-study-app-a19c3.firebasestorage.app',
+  );
+  static const FirebaseOptions android = FirebaseOptions(
+    apiKey: 'AIzaSyC94ABunIpKuDhnVzzOWQJh8QtJzbPDOwQ',
+    appId: '1:225344594013:android:25498912b45566c6f3edb4',
+    messagingSenderId: '225344594013',
+    projectId: 'ai-study-app-a19c3',
     storageBucket: 'ai-study-app-a19c3.firebasestorage.app',
   );
 }
